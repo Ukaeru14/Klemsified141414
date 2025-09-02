@@ -87,7 +87,8 @@ await expect(this.username).toHaveValue('Clement Ukaeru');
 await expect(this.email).toHaveValue('cukaeru14@gmail.com');
 await this.password.setValue('Mummys1991@')
 await this.dobday.selectByIndex(14);
-await this.dobmonth.selectByVisibleText(2000);
+await this.dobmonth.selectByVisibleText('May');
+await this.dobyear.selectByVisibleText('1995');
 await this.adinfofirstname.setValue('Clement');
 await this.adinfolastname.setValue('Ukaeru');
 await this.adinfocompany.setValue('Klemsified');
@@ -98,7 +99,7 @@ await this.state.setValue('Dallas');
 await this.city.setValue('Manny');
 await this.zipcode.setValue('20012');
 await this.createacct.click();
-await this.acctcreated.click();
+await this.acctcreated.isDisplayed();
 await this.acctcreatedcontbtn.isDisplayed();
     
 }

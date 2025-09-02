@@ -48,8 +48,14 @@ class addcart{
     get cartHeading() {
         return $("//li[@class='active']");
     }
-    get xbtn() {
+    get xbtnproductone() {
         return $("//tr[@id='product-1']//i[@class='fa fa-times']");
+    }
+    get xbtproducttwo(){
+        return $("//tr[@id='product-2']//i[@class='fa fa-times']");
+    }
+    get cartisemptypage(){
+        return $('//span[@id="empty_cart"]');
     }
     get emptyCart() {
         return $("//a[normalize-space()='Blue Top']");
@@ -77,7 +83,9 @@ class addcart{
  
    async thirdtest (){
     await this.cartHeading.isDisplayed();
-    await this.xbtn.click();
+    await this.xbtnproductone.click();
+    await this.xbtproducttwo.click();
+    await expect (this.cartisemptypage).toBeDisplayed(),
     await this.emptyCart.isDisplayed();
  
    }
