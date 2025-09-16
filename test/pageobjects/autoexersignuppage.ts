@@ -1,7 +1,4 @@
 class autosignup{
-  test() {
-    throw new Error('Method not implemented.');
-  }
     get cookie(){
         return $('//p[text()="Consent"]');
     }
@@ -80,11 +77,11 @@ await browser.url('https://automationexercise.com');
 await this.cookie.click();
 await this.signup.click();
 await this.name.setValue("Clement Ukaeru");
-await this.emailaddress.setValue('cukaeru14@gmail.com');
+await this.emailaddress.setValue('klemstest@gmail.com');
 await this.signupbtn.click();
 await this.tittlemr.click();
 await expect(this.username).toHaveValue('Clement Ukaeru');
-await expect(this.email).toHaveValue('cukaeru14@gmail.com');
+await expect(this.email).toHaveValue('klemstest@gmail.com');
 await this.password.setValue('Mummys1991@')
 await this.dobday.selectByIndex(14);
 await this.dobmonth.selectByVisibleText('May');
